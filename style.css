@@ -1,0 +1,1158 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #173e68 0%,
+            #0b2038 45%,
+            #030a13 100%
+        );
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================
+   DEKORASI
+========================= */
+
+.decorations span {
+
+    position: fixed;
+
+    color: #9bdcff;
+
+    text-shadow:
+        0 0 10px #72caff,
+        0 0 25px #72caff;
+
+    opacity: 0.8;
+
+    pointer-events: none;
+
+    animation:
+        floating 4s ease-in-out infinite;
+
+}
+
+
+.star {
+
+    font-size: 55px;
+
+    top: 12%;
+
+    left: 7%;
+
+}
+
+
+.star2 {
+
+    font-size: 35px;
+
+    top: 30%;
+
+    right: 8%;
+
+    animation-delay: 1s;
+
+}
+
+
+.star3 {
+
+    font-size: 45px;
+
+    bottom: 12%;
+
+    left: 10%;
+
+    animation-delay: 2s;
+
+}
+
+
+.cube {
+
+    font-size: 70px;
+
+    top: 15%;
+
+    right: 10%;
+
+    animation-delay: 1.5s;
+
+}
+
+
+.cube2 {
+
+    font-size: 50px;
+
+    bottom: 15%;
+
+    right: 8%;
+
+    animation-delay: 2.5s;
+
+}
+
+
+@keyframes floating {
+
+    0% {
+
+        transform:
+            translateY(0px)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-15px)
+            rotate(8deg);
+
+    }
+
+    100% {
+
+        transform:
+            translateY(0px)
+            rotate(0deg);
+
+    }
+
+}
+
+
+/* =========================
+   HALAMAN
+========================= */
+
+.page {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    padding:
+        60px
+        7%;
+
+    display: none;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    animation:
+        muncul 0.7s ease;
+
+}
+
+
+.page.active {
+
+    display: flex;
+
+}
+
+
+@keyframes muncul {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.small-title {
+
+    color: #9bdcff;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+
+}
+
+
+h1 {
+
+    margin: 0;
+
+    font-family: Georgia, serif;
+
+    font-style: italic;
+
+    font-size:
+        clamp(
+            55px,
+            9vw,
+            100px
+        );
+
+    line-height: 1;
+
+    text-shadow:
+        0 0 20px
+        rgba(
+            130,
+            210,
+            255,
+            0.25
+        );
+
+}
+
+
+h2 {
+
+    margin-top: 10px;
+
+    font-family: Georgia, serif;
+
+    font-style: italic;
+
+    font-size: 55px;
+
+}
+
+
+.subtitle {
+
+    color: #c7d9e8;
+
+    font-size: 13px;
+
+    margin:
+        20px
+        0
+        30px;
+
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.time {
+
+    width: 95px;
+
+    height: 95px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border:
+        1px solid
+        rgba(
+            150,
+            215,
+            255,
+            0.35
+        );
+
+    border-radius: 10px;
+
+    background:
+        rgba(
+            5,
+            25,
+            45,
+            0.65
+        );
+
+    box-shadow:
+        0 0 25px
+        rgba(
+            80,
+            180,
+            255,
+            0.1
+        );
+
+}
+
+
+.time span {
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+}
+
+
+.time small {
+
+    margin-top: 5px;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    color: #a9c0d4;
+
+}
+
+
+.countdown > b {
+
+    color: #9bdcff;
+
+    font-size: 25px;
+
+}
+
+
+.note {
+
+    color: #b8ccde;
+
+    font-size: 11px;
+
+    margin:
+        25px
+        0;
+
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+
+    padding:
+        13px
+        22px;
+
+    border:
+        1px solid
+        rgba(
+            155,
+            220,
+            255,
+            0.5
+        );
+
+    border-radius: 30px;
+
+    background:
+        rgba(
+            30,
+            80,
+            120,
+            0.4
+        );
+
+    color: white;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+button:hover {
+
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(
+            70,
+            160,
+            230,
+            0.4
+        );
+
+    box-shadow:
+        0 0 20px
+        rgba(
+            100,
+            200,
+            255,
+            0.2
+        );
+
+}
+
+
+/* =========================
+   UCAPAN
+========================= */
+
+.letter {
+
+    width:
+        min(
+            650px,
+            90%
+        );
+
+    margin:
+        30px
+        0;
+
+    padding: 30px;
+
+    text-align: left;
+
+    background:
+        rgba(
+            10,
+            30,
+            50,
+            0.7
+        );
+
+    border:
+        1px solid
+        rgba(
+            155,
+            220,
+            255,
+            0.3
+        );
+
+    border-radius: 12px;
+
+}
+
+
+.letter h3 {
+
+    font-size: 12px;
+
+}
+
+
+.letter p {
+
+    color: #d5e3ee;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================
+   GALERI
+========================= */
+
+.gallery {
+
+    width:
+        min(
+            750px,
+            95%
+        );
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 20px;
+
+    margin:
+        35px
+        0;
+
+}
+
+
+.photo {
+
+    padding:
+        8px
+        8px
+        25px;
+
+    background: white;
+
+    box-shadow:
+        0 10px 25px
+        rgba(
+            0,
+            0,
+            0,
+            0.4
+        );
+
+    transform:
+        rotate(-2deg);
+
+    transition: 0.3s;
+
+}
+
+
+.photo:nth-child(2) {
+
+    transform:
+        rotate(3deg);
+
+}
+
+
+.photo:nth-child(3) {
+
+    transform:
+        rotate(-1deg);
+
+}
+
+
+.photo:nth-child(4) {
+
+    transform:
+        rotate(2deg);
+
+}
+
+
+.photo:nth-child(5) {
+
+    transform:
+        rotate(-3deg);
+
+}
+
+
+.photo:nth-child(6) {
+
+    transform:
+        rotate(2deg);
+
+}
+
+
+.photo:hover {
+
+    transform:
+        translateY(-10px)
+        rotate(0deg);
+
+}
+
+
+.photo img {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+/* =========================
+   VIDEO
+========================= */
+
+.video-box {
+
+    width:
+        min(
+            750px,
+            95%
+        );
+
+    margin:
+        30px
+        0;
+
+    padding: 8px;
+
+    background:
+        rgba(
+            5,
+            15,
+            25,
+            0.8
+        );
+
+    border:
+        1px solid
+        rgba(
+            155,
+            220,
+            255,
+            0.4
+        );
+
+}
+
+
+.video-box video {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+
+/* =========================
+   HP
+========================= */
+
+@media (max-width: 600px) {
+
+    .countdown {
+
+        gap: 4px;
+
+    }
+
+
+    .time {
+
+        width: 65px;
+
+        height: 75px;
+
+    }
+
+
+    .time span {
+
+        font-size: 30px;
+
+    }
+
+
+    .countdown > b {
+
+        font-size: 18px;
+
+    }
+
+
+    .gallery {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+        gap: 12px;
+
+    }
+
+
+    h2 {
+
+        font-size: 40px;
+
+    }
+}
+
+
+/* =========================================
+   KOTAK FOTO MELEDAK
+========================================= */
+
+.photo-explosion {
+    position: relative;
+
+    width: 100%;
+    max-width: 700px;
+
+    height: 500px;
+
+    margin: 30px auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: visible;
+}
+
+
+/* AREA FOTO */
+
+.explosion-photos {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    top: 0;
+
+    pointer-events: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* FOTO */
+
+.explode-photo {
+
+    position: absolute;
+
+    width: 120px;
+    height: 155px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    border: 4px solid white;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.35);
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0);
+
+    opacity: 0;
+
+    z-index: 1;
+}
+
+
+/* FOTO KELUAR */
+
+.photo-explosion.open .explode-photo {
+
+    animation:
+        photoExplosion
+        1.2s
+        cubic-bezier(.17,.67,.3,1.3)
+        var(--delay)
+        forwards;
+
+}
+
+
+/* =========================================
+   ANIMASI FOTO
+========================================= */
+
+@keyframes photoExplosion {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0)
+            rotate(0deg);
+
+    }
+
+
+    45% {
+
+        opacity: 1;
+
+        transform:
+            translate(
+                calc(-50% + var(--x) * 0.65),
+                calc(-50% + var(--y) * 0.65)
+            )
+            scale(1.15)
+            rotate(
+                calc(var(--rotate) * 0.5)
+            );
+
+    }
+
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            translate(
+                calc(-50% + var(--x)),
+                calc(-50% + var(--y))
+            )
+            scale(1)
+            rotate(var(--rotate));
+
+    }
+
+}
+
+
+/* =========================================
+   KOTAK HADIAH
+========================================= */
+
+.gift-box {
+
+    position: absolute;
+
+    width: 150px;
+    height: 130px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    cursor: pointer;
+
+    z-index: 10;
+
+}
+
+
+.gift-box:hover {
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.08);
+
+}
+
+
+/* =========================================
+   BADAN KOTAK
+========================================= */
+
+.box-body {
+
+    position: absolute;
+
+    width: 150px;
+    height: 100px;
+
+    bottom: 0;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5bbcff,
+            #238fe0
+        );
+
+    box-shadow:
+        0 15px 30px
+        rgba(0, 0, 0, 0.3);
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================
+   PITA
+========================================= */
+
+.box-ribbon {
+
+    position: absolute;
+
+    width: 28px;
+    height: 100%;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    background: #dff6ff;
+
+}
+
+
+/* =========================================
+   TUTUP KOTAK
+========================================= */
+
+.box-lid {
+
+    position: absolute;
+
+    width: 165px;
+    height: 35px;
+
+    left: -7px;
+    top: 0;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #78caff,
+            #319ce8
+        );
+
+    box-shadow:
+        0 8px 15px
+        rgba(0, 0, 0, 0.25);
+
+    z-index: 2;
+
+    transition:
+        transform 0.7s ease;
+
+}
+
+
+/* =========================================
+   BOW / SIMBOL
+========================================= */
+
+.box-bow {
+
+    position: absolute;
+
+    z-index: 5;
+
+    left: 50%;
+    top: -35px;
+
+    transform:
+        translateX(-50%);
+
+    font-size: 45px;
+
+    color: white;
+
+    text-shadow:
+        0 5px 10px
+        rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* =========================================
+   KOTAK DIBUKA
+========================================= */
+
+.photo-explosion.open .box-lid {
+
+    transform:
+        translateY(-70px)
+        rotate(-8deg);
+
+}
+
+
+.photo-explosion.open .gift-box {
+
+    animation:
+        boxShake
+        0.5s
+        ease;
+
+}
+
+
+/* =========================================
+   GETAR KOTAK
+========================================= */
+
+@keyframes boxShake {
+
+    0% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+
+    }
+
+
+    30% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.15)
+            rotate(-4deg);
+
+    }
+
+
+    60% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.15)
+            rotate(4deg);
+
+    }
+
+
+    100% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================
+   TEKS
+========================================= */
+
+.box-text {
+
+    opacity: 0;
+
+    margin-top: 15px;
+
+    font-size: 18px;
+
+    transition:
+        opacity 0.5s ease 1s;
+
+}
+
+
+.photo-explosion.open .box-text {
+
+    opacity: 1;
+
+}
+
+
+/* =========================================
+   HP
+========================================= */
+
+@media (max-width: 600px) {
+
+    .photo-explosion {
+
+        height: 450px;
+
+    }
+
+
+    .explode-photo {
+
+        width: 75px;
+        height: 100px;
+
+        border-width: 3px;
+
+    }
+
+
+    .gift-box {
+
+        width: 130px;
+        height: 115px;
+
+    }
+
+
+    .box-body {
+
+        width: 130px;
+        height: 90px;
+
+    }
+
+
+    .box-lid {
+
+        width: 145px;
+        height: 32px;
+
+        left: -7px;
+
+    }
+
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        HBD
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<audio id="bgMusic" loop>
+    <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+<body>
+
+    <div class="decorations">
+        <span class="star">★</span>
+        <span class="cube">◇</span>
+        <span class="star star2">✦</span>
+        <span class="cube cube2">⬡</span>
+        <span class="star star3">✧</span>
+    </div>
+
+    <section class="page active" id="home">
+        <p class="small-title">
+            ✦ MENGHITUNG HARI ✦
+        </p>
+        <h1>
+           Special Day Ibrahim
+        </h1>
+
+        <h2>
+            is Coming
+        </h2>
+        <p class="subtitle">
+           Hopefully, 16 isn't a bad number.
+        </p>
+
+        <div class="countdown">
+            <div class="time">
+                <span id="days">
+                    00
+                </span>
+                <small>
+                    HARI
+                </small>
+            </div>
+            <b>:</b>
+            <div class="time">
+                <span id="hours">
+                    00
+                </span>
+                <small>
+                    JAM
+                </small>
+            </div>
+            <b>:</b>
+            <div class="time">
+                <span id="minutes">
+                    00
+                </span>
+                <small>
+                    MENIT
+                </small>
+            </div>
+            <b>:</b>
+
+            <div class="time">
+                <span id="seconds">
+                    00
+                </span>
+                <small>
+                    DETIK
+                </small>
+            </div>
+        </div>
+
+        <p class="note">
+            ✦ Hari Spesial Yang Ditunggu ✦
+        </p>
+        <button onclick="startMusic(); nextPage('message')">
+         ✦ CLICK ✦
+        </button>
+
+    </section>
+
+    <section class="page" id="message">
+        <p class="small-title">
+            ✦ FOR YOU ✦
+        </p>
+        <h1>
+            Happy Birtday
+        </h1>
+        <div class="letter">
+            <h3>
+                A new chapter, new hope. ✦
+            </h3>
+            <p>
+                Today isn't just about getting older,
+                but about everything you've been through to reach this point.
+            </p>
+
+            <p>
+               There are things that are fun, things that are exhausting,
+               and also little things that eventually become memories.
+            </p>
+
+            <p>
+                And somehow, I'm still here.✦
+            </p>
+
+            <p>
+                — 16, and just getting started.
+            </p>
+
+        </div>
+
+
+        <button onclick="nextPage('gallery')">
+            ✦ CLICK ✦
+        </button>
+
+    </section>
+
+    <section class="page" id="gallery">
+
+
+        <p class="small-title">
+            ✦ A SPECIAL MEMORY ✦
+        </p>
+
+        <h1>
+
+            His Best Moment
+
+        </h1>
+
+
+        <div class="gallery">
+
+            <div class="photo">
+                <img src="foto1.jpeg">
+            </div>
+
+            <div class="photo">
+                <img src="foto2.jpeg">
+            </div>
+
+            <div class="photo">
+                <img src="foto3.jpeg">
+            </div>
+
+            <div class="photo">
+                <img src="foto4.jpeg">
+            </div>
+
+            <div class="photo">
+                <img src="foto5.jpeg">
+            </div>
+
+            <div class="photo">
+                <img src="foto6.jpeg">
+            </div>
+
+        </div>
+
+
+        <button onclick="nextPage('video')">
+            ✦ CLICK ✦
+        </button>
+
+    </section>
+
+   <!-- HALAMAN FOTO MELEDAK -->
+<section class="page" id="video">
+
+  <h1>✦ Buka Kotaknya ✦</h1>
+  <p class="subtitle">OPEN</p>
+
+  <div class="photo-explosion">
+
+    <!-- FOTO-FOTO YANG AKAN KELUAR -->
+    <div class="explosion-photos">
+
+      <img src="foto7.jpeg" class="explode-photo photo-7">
+      <img src="foto8.jpeg" class="explode-photo photo-8">
+      <img src="foto9.jpeg" class="explode-photo photo-9">
+      <img src="foto10.jpeg" class="explode-photo photo-10">
+      <img src="foto11.jpeg" class="explode-photo photo-11">
+      <img src="foto12.jpeg" class="explode-photo photo-12">
+      <img src="foto13.jpeg" class="explode-photo photo-13">
+      <img src="foto14.jpeg" class="explode-photo photo-14">
+      <img src="foto15.jpeg" class="explode-photo photo-15">
+      <img src="foto16.jpeg" class="explode-photo photo-16">
+      <img src="foto17.jpeg" class="explode-photo photo-17">
+      <img src="foto18.jpeg" class="explode-photo photo-18">
+      <img src="foto19.jpeg" class="explode-photo photo-19">
+
+    </div>
+
+    <!-- KOTAK -->
+    <div class="gift-box" onclick="explodePhotos()">
+
+      <div class="box-lid"></div>
+
+      <div class="box-body">
+        <div class="box-ribbon"></div>
+      </div>
+
+      <div class="box-bow">
+        ✦
+      </div>
+
+    </div>
+
+    <!-- TEKS SETELAH DIBUKA -->
+    <p class="box-text">
+      ✦ Memories ✦
+    </p>
+
+  </div>
+
+  <button onclick="nextPage('message')">
+    ✦ Kembali ✦
+  </button>
+
+</section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
